@@ -13,6 +13,8 @@ class MrSunshisJournalApp : Application() {
         JournalRepository(
             database.habitatDao(),
             database.mascotaDao(),
-            database.actividadDao())
+            database.actividadDao(),
+            database.notificacionDao()
+        )
     }
 }
