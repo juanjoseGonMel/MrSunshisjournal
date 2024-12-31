@@ -12,5 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Fondo para el tema oscuro -->
+        <!--<item name="android:windowBackground">@drawable/fondo_oscuro</item>-->
     </style>
 </resources>

@@ -5,6 +5,9 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
+
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.modulo10.juandev.mrsunshisjournal.ui.home.HomeFragment"
@@ -22,4 +25,5 @@
         android:name="com.modulo10.juandev.mrsunshisjournal.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
 </navigation>

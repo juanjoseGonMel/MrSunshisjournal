@@ -12,5 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!-- Fondo para el tema claro -->
+        <!--<item name="android:windowBackground">@drawable/fondo_claro</item>-->
     </style>
 </resources>
