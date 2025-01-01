@@ -25,10 +25,44 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+
+
+        /*
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+         */
+
+
+
+
+/*
+        // En tu Fragment o Activity
+
+        val recyclerViewHorizontal = view.findViewById<RecyclerView>(R.id.recyclerViewHorizontal)
+        val recyclerViewVertical = view.findViewById<RecyclerView>(R.id.recyclerViewVertical)
+
+        // Configuración para RecyclerView Horizontal
+        val horizontalAdapter = HorizontalAdapter()  // Tu Adapter para los elementos horizontales
+        val horizontalLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewHorizontal.layoutManager = horizontalLayoutManager
+        recyclerViewHorizontal.adapter = horizontalAdapter
+
+        // Configuración para RecyclerView Vertical
+        val verticalAdapter = VerticalAdapter()  // Tu Adapter para los elementos verticales
+        val verticalLayoutManager = LinearLayoutManager(context)
+        recyclerViewVertical.layoutManager = verticalLayoutManager
+        recyclerViewVertical.adapter = verticalAdapter
+
+
+        
+ */
+
+
+
+
+
         return root
     }
 
