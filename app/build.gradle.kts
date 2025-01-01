@@ -53,6 +53,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    //Glide
+    implementation(libs.glide)
+
 
     //Room
     implementation(libs.androidx.room.ktx)

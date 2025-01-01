@@ -26,22 +26,28 @@ data class MascotaEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "pet_id")
     var id: Long = 0,
+
     @ColumnInfo(name = "pet_name")
     var name: String,
+
     @ColumnInfo(name = "pet_genero")
     var genero: Boolean,
+
     @ColumnInfo(name = "pet_cumpleaños")
     var cumple: Date,
+
+    @ColumnInfo(name = "pet_photo")
+    var photo: String?,
+
     @ColumnInfo(name = "pet_descripcion")
     var descripcion: String,
+
     @ColumnInfo(name = "pet_raza")
     var raza: String,
-    @ColumnInfo(name = "pet_cientifico")
-    var razacien: String,
+
     @ColumnInfo(name = "pet_esteril")
     var esteril: Boolean,
-    @ColumnInfo(name = "pet_nacimiento")
-    var nacimiento: Boolean,
+
     @ColumnInfo(name = "pet_peso")
     var pesoactual: Float,
 

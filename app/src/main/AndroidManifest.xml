@@ -8,6 +8,15 @@
         android:required="true" />
     <uses-permission android:name="android.permission.CAMERA"/>
 
+    <!-- en versiones de android hasta el api level32 se usaba este -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".application.MrSunshisJournalApp"

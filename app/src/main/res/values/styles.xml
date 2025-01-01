@@ -22,6 +22,34 @@
         <item name="boxCornerRadiusBottomEnd">16dp</item>
     </style>
 
+    <!-- Estilo para TextView -->
+    <style name="CustomTextView">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+
+        <!-- Márgenes -->
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+
+        <!-- Tamaño y apariencia del texto -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item> <!-- Espaciado entre letras -->
+
+        <!-- Color del texto -->
+        <item name="android:textColor">@color/primaryTextColor</item>
+
+        <!-- Alineación del texto -->
+        <item name="android:gravity">center</item> <!-- Centrado horizontal y vertical -->
+
+        <!-- Sombra sutil para un efecto de elevación (opcional) -->
+        <item name="android:elevation">2dp</item>
+
+
+    </style>
+
     <!-- Estilo para TextInputEditText con color y padding -->
     <style name="CustomTextInputEditText">
         <item name="android:textColor">#000000</item> <!-- Color del texto -->
@@ -29,8 +57,5 @@
         <item name="android:paddingStart">8dp</item> <!-- Padding izquierdo -->
         <item name="android:paddingEnd">8dp</item> <!-- Padding derecho -->
     </style>
-
-
-
 
 </resources>
