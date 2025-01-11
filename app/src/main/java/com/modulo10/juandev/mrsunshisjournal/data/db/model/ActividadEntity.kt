@@ -21,6 +21,9 @@ data class ActividadEntity(
     @ColumnInfo(name = "act_tipo")
     var tipo: String,
 
+    @ColumnInfo(name = "act_secuencia")
+    var secuencia: Double,
+
     @ColumnInfo(name = "act_dateinicio")
     var inicio: Date,
     @ColumnInfo(name = "act_datefin")

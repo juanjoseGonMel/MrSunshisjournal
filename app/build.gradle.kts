@@ -5,6 +5,8 @@ plugins {
     //Nav comp
     alias(libs.plugins.androidx.navigation.safeargs)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt)
 
     //id("kotlin-kapt")
     id("com.google.devtools.ksp")
@@ -42,6 +44,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -76,8 +79,12 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.fragment.ktx)
 
+    implementation(libs.material.dialogs)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.hilt)
+    ksp(libs.hilt.compiler)
 }

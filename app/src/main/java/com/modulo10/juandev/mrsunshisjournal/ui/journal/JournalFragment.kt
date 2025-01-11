@@ -7,8 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.modulo10.juandev.mrsunshisjournal.R
+import com.modulo10.juandev.mrsunshisjournal.data.db.model.ActividadEntity
+import com.modulo10.juandev.mrsunshisjournal.data.db.model.NotificationsEntity
 import com.modulo10.juandev.mrsunshisjournal.databinding.FragmentHomeBinding
 import com.modulo10.juandev.mrsunshisjournal.databinding.FragmentJournalBinding
+import com.modulo10.juandev.mrsunshisjournal.ui.dashboard.DashboardViewModel
+import com.modulo10.juandev.mrsunshisjournal.ui.listeners.NewActividadListener
+import com.modulo10.juandev.mrsunshisjournal.ui.listeners.NewNotificationListener
 
 class JournalFragment : Fragment() {
 
@@ -16,6 +21,13 @@ class JournalFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: JournalViewModel by viewModels()
+
+
+
+    private var notificationsList = arrayListOf<NotificationsEntity>()
+
+
+    private lateinit var createNotificationListener: NewNotificationListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

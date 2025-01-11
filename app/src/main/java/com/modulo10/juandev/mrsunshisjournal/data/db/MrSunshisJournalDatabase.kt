@@ -5,6 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.ActividadDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.HabitatDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.MascotaDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.NotificationsDAO
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.ActividadEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.HabitatEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.MascotaEntity
@@ -28,7 +32,7 @@ abstract class MrSunshisJournalDatabase : RoomDatabase() {
     abstract fun notificacionDao(): NotificationsDAO
 
 
-    companion object{
+    companion object {
         @Volatile
         private var INSTANCE: MrSunshisJournalDatabase? = null
 

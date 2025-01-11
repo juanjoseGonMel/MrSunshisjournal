@@ -1,12 +1,13 @@
 package com.modulo10.juandev.mrsunshisjournal.data.db.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.Relation
 import com.modulo10.juandev.mrsunshisjournal.utils.Constants
+import kotlinx.parcelize.Parcelize
 
-
+@Parcelize
 @Entity(tableName = Constants.DATABASE_HABITAT_TABLE)
 data class HabitatEntity(
     @PrimaryKey(autoGenerate = true)
@@ -29,12 +30,16 @@ data class HabitatEntity(
     var tipo: String,
 
     @ColumnInfo(name = "habitat_tamaño")
-    var size: Float,
+    var size: Double,
 
     @ColumnInfo(name = "habitat_temperatura")
-    var temperatura: Float,
+    var temperatura: Double,
 
     @ColumnInfo(name = "habitat_acceso")
     var abierta: Boolean = false
-)
+) : Parcelable {
+    override fun toString(): String {
+        return name
+    }
+}
 

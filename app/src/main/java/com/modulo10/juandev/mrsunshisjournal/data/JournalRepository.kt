@@ -1,9 +1,9 @@
 package com.modulo10.juandev.mrsunshisjournal.data
 
-import com.modulo10.juandev.mrsunshisjournal.data.db.ActividadDAO
-import com.modulo10.juandev.mrsunshisjournal.data.db.HabitatDAO
-import com.modulo10.juandev.mrsunshisjournal.data.db.MascotaDAO
-import com.modulo10.juandev.mrsunshisjournal.data.db.NotificationsDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.ActividadDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.HabitatDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.MascotaDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.NotificationsDAO
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.ActividadEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.HabitatEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.MascotaEntity
@@ -19,8 +19,8 @@ class JournalRepository(
 
     // Métodos para Habitat
 
-    suspend fun insertHabitat(habitat: HabitatEntity) {
-        habitatDao.insertHabitat(habitat)
+    suspend fun insertHabitat(habitat: HabitatEntity) : Long {
+        return habitatDao.insertHabitat(habitat)
     }
 
     /*
@@ -44,8 +44,8 @@ class JournalRepository(
 
     // Métodos para Mascota
 
-    suspend fun insertMascota(mascota: MascotaEntity) {
-        mascotaDao.insertMascota(mascota)
+    suspend fun insertMascota(mascota: MascotaEntity) : Long {
+        return mascotaDao.insertMascota(mascota)
     }
 
     /*

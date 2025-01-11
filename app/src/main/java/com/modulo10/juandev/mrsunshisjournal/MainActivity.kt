@@ -8,21 +8,51 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.modulo10.juandev.mrsunshisjournal.data.JournalRepository
 import com.modulo10.juandev.mrsunshisjournal.databinding.ActivityMainBinding
+import com.modulo10.juandev.mrsunshisjournal.utils.DatabaseFiller
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var navController: NavController
 
+
+    private lateinit var databaseFiller: DatabaseFiller
+    private lateinit var repository: JournalRepository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        /* Borrar
+
+        databaseFiller = DatabaseFiller(this)
+
+        // Llamamos a la función para llenar la base de datos con datos de prueba
+        GlobalScope.launch {
+            databaseFiller.fillDatabaseWithTestData()
+        }*/
+
+        //repository = (application as MrSunshisJournalApp).repository
+
+
+        // Inicializar DatabaseFiller
+        //databaseFiller = DatabaseFiller(repository)
+
+        // Llamar al método para insertar datos de prueba (se ejecuta en un hilo de fondo)
+        //lifecycleScope.launch {
+          //  databaseFiller.fillDatabaseWithTestData()
+        //}
+
+        /* */
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -77,4 +107,6 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 }

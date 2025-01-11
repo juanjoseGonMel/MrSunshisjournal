@@ -31,9 +31,9 @@ data class MascotaEntity(
     var name: String,
 
     @ColumnInfo(name = "pet_genero")
-    var genero: Boolean,
+    var genero: String,
 
-    @ColumnInfo(name = "pet_cumpleaños")
+    @ColumnInfo(name = "pet_birthday")
     var cumple: Date,
 
     @ColumnInfo(name = "pet_photo")
@@ -49,7 +49,7 @@ data class MascotaEntity(
     var esteril: Boolean,
 
     @ColumnInfo(name = "pet_peso")
-    var pesoactual: Float,
+    var pesoactual: Double,
 
     @ColumnInfo(name = "habitat_owner_id")
     val habitatId: Long

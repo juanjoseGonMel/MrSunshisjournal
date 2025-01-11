@@ -10,7 +10,7 @@ import com.modulo10.juandev.mrsunshisjournal.databinding.HabitatElementBinding
 class HabitatAdapter(
     private val habitats : MutableList<HabitatEntity>,
     private val onHabitatClick : (Int) -> Unit
-) : RecyclerView.Adapter<HabitatViewHolder>(){
+) : RecyclerView.Adapter<HabitatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HabitatViewHolder {
         val binding = HabitatElementBinding.inflate(LayoutInflater.from(parent.context), parent, false)

@@ -4,7 +4,7 @@
     <string name="title_dashboard">Notificaciones</string>
     <string name="title_notifications">Perfil</string>
     <string name="btnenviar">Enviar</string>
-    <string name="spiLocalizacion">Selecciona tu localización:</string>
+
     <string name="user_image">avatar</string>
     <string name="btnguardar">Guardar</string>
     <string name="etApellido">Apellido</string>
@@ -15,6 +15,14 @@
     <string name="btnadd">añadir</string>
 
 
+    <!--  label spinners  -->
+    <string name="spiLocalizacion">Selecciona tu localización:</string>
+
+    <string name="spiHabitat">Selecciona el habitat:</string>
+    <string name="spiRaza">Selecciona la raza:</string>
+    <string name="spiEsteril">¿tu cuyo es esteril?</string>
+    <string name="spiGenero">Selecciona el genero:</string>
+
     <!--  array de localizacion general  -->
     <string-array name="localizacion_options">
         <item>Costa</item>
@@ -22,6 +30,35 @@
         <item>Montaña</item>
         <item>Zona Centro</item>
     </string-array>
+
+    <!--  array de Esteril  -->
+    <string-array name="esteril_options">
+        <item>Estéril</item>
+        <item>No esterilizado</item>
+    </string-array>
+
+
+    <!--  array de razas  -->
+    <string-array name="razas_options">
+        <item>Skinny</item>
+        <item>Peruana</item>
+        <item>Abisinio</item>
+        <item>Americano</item>
+        <item>Sheltie</item>
+        <item>Otro</item>
+    </string-array>
+
+
+
+    <!--  array de genero  -->
+    <string-array name="genero_options">
+        <item>Macho</item>
+        <item>Hembra</item>
+    </string-array>
+
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="splash">splash</string>
@@ -34,5 +71,9 @@
     <string name="age_label">Edad: %d años</string>
     <string name="imgGenDes">Genero</string>
     <string name="imgPesoDes">Peso</string>
+    <string name="namePet">Nombre de la mascota</string>
+    <string name="spiOpenClose">¿su habitat esta abierto para que su cuyo salga cuando quiera?</string>
+    <string name="label_pet">Mascota</string>
+    <string name="label_habitat">Habitats</string>
 
 </resources>
