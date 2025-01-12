@@ -5,5 +5,5 @@ object Constants {
     const val DATABASE_HABITAT_TABLE = "habitat_data_table"
     const val DATABASE_MASCOTA_TABLE = "mascota_data_table"
     const val DATABASE_ACTIVIDAD_TABLE = "actividad_data_table"
-
+    const val DATABASE_NOTIFICATIONS_TABLE = "notifications_data_table"
 }

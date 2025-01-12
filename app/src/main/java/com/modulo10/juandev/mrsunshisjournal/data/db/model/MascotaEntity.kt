@@ -1,6 +1,7 @@
 package com.modulo10.juandev.mrsunshisjournal.data.db.model
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
@@ -25,26 +26,50 @@ data class MascotaEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "pet_id")
     var id: Long = 0,
+
     @ColumnInfo(name = "pet_name")
     var name: String,
+
     @ColumnInfo(name = "pet_genero")
-    var genero: Boolean,
-    @ColumnInfo(name = "pet_cumpleaños")
+    var genero: String,
+
+    @ColumnInfo(name = "pet_birthday")
     var cumple: Date,
+
+    @ColumnInfo(name = "pet_photo")
+    var photo: String?,
+
     @ColumnInfo(name = "pet_descripcion")
     var descripcion: String,
+
     @ColumnInfo(name = "pet_raza")
     var raza: String,
-    @ColumnInfo(name = "pet_cientifico")
-    var razacien: String,
+
     @ColumnInfo(name = "pet_esteril")
     var esteril: Boolean,
-    @ColumnInfo(name = "pet_nacimiento")
-    var nacimiento: Boolean,
+
     @ColumnInfo(name = "pet_peso")
-    var pesoactual: Float,
-    @ColumnInfo(name = "pet_comida")
-    var comida: String,
+    var pesoactual: Double,
+
     @ColumnInfo(name = "habitat_owner_id")
-    val habitatId: Long  // Referencia al habitat
+    val habitatId: Long
+)
+
+
+// Clase de relación entre Mascotas, Notificaciones y Actividades
+
+data class MascotaConNotificacionesYHabitat(
+    @Embedded val mascota: MascotaEntity,
+
+    @Relation(
+        parentColumn = "habitat_owner_id",
+        entityColumn = "habitat_id"
+    )
+    val habitat: HabitatEntity,  // Relación con HabitatEntity
+
+    @Relation(
+        parentColumn = "pet_id",
+        entityColumn = "pet_owner_id"
+    )
+    val notificaciones: List<NotificationsEntity>  // Relación con NotificationsEntity
 )

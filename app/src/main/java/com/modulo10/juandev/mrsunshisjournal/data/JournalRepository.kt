@@ -1,23 +1,26 @@
 package com.modulo10.juandev.mrsunshisjournal.data
 
-import com.modulo10.juandev.mrsunshisjournal.data.db.ActividadDAO
-import com.modulo10.juandev.mrsunshisjournal.data.db.HabitatDAO
-import com.modulo10.juandev.mrsunshisjournal.data.db.MascotaDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.ActividadDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.HabitatDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.MascotaDAO
+import com.modulo10.juandev.mrsunshisjournal.data.db.dao.NotificationsDAO
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.ActividadEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.HabitatEntity
 import com.modulo10.juandev.mrsunshisjournal.data.db.model.MascotaEntity
+import com.modulo10.juandev.mrsunshisjournal.data.db.model.NotificationsEntity
 
 
 class JournalRepository(
     private val habitatDao: HabitatDAO,
     private val mascotaDao: MascotaDAO,
-    private val actividadDao: ActividadDAO
+    private val actividadDao: ActividadDAO,
+    private val notificacionDao: NotificationsDAO
 ){
 
     // Métodos para Habitat
 
-    suspend fun insertHabitat(habitat: HabitatEntity) {
-        habitatDao.insertHabitat(habitat)
+    suspend fun insertHabitat(habitat: HabitatEntity) : Long {
+        return habitatDao.insertHabitat(habitat)
     }
 
     /*
@@ -41,8 +44,8 @@ class JournalRepository(
 
     // Métodos para Mascota
 
-    suspend fun insertMascota(mascota: MascotaEntity) {
-        mascotaDao.insertMascota(mascota)
+    suspend fun insertMascota(mascota: MascotaEntity) : Long {
+        return mascotaDao.insertMascota(mascota)
     }
 
     /*
@@ -86,6 +89,30 @@ class JournalRepository(
 
     suspend fun delateActividad(act: ActividadEntity) {
         actividadDao.delateActividad(act)
+    }
+
+    // Métodos para Notificaciones
+
+    suspend fun insertNotificacion(noti: NotificationsEntity) {
+        notificacionDao.insertNotificacion(noti)
+    }
+
+    /*
+    suspend fun insertNotificaciones(noti: MutableList<NotificationsEntity>) {
+        notificacionDao.insertNotificaciones(noti)
+    }
+    */
+
+    suspend fun getAllNotificaciones(): MutableList<NotificationsEntity> {
+        return notificacionDao.getAllNotificaciones()
+    }
+
+    suspend fun updateNotificacion(noti: NotificationsEntity) {
+        notificacionDao.updateNotificacion(noti)
+    }
+
+    suspend fun delateNotificacion(noti: NotificationsEntity) {
+        notificacionDao.delateNotificacion(noti)
     }
 
 }

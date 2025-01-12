@@ -5,6 +5,9 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
+
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.modulo10.juandev.mrsunshisjournal.ui.home.HomeFragment"
@@ -18,8 +21,17 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
+        android:id="@+id/navigation_journal"
+        android:name="com.modulo10.juandev.mrsunshisjournal.ui.journal.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" />
+
+    <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.modulo10.juandev.mrsunshisjournal.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+
+
 </navigation>
