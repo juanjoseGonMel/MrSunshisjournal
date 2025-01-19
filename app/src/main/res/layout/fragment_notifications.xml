@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@drawable/fondo_oscuro"
     >
 
 
@@ -27,6 +28,7 @@
             android:layout_gravity="center"
             android:contentDescription="@string/user_image"
             android:src="@drawable/ic_person"
+            android:background="@color/white"
             app:shapeAppearanceOverlay="@style/CircularImage" />
 
         <!-- Ícono de la cámara sobre la imagen -->
@@ -149,6 +151,8 @@
                 android:layout_marginTop="32dp"
                 android:text="@string/spiLocalizacion"
                 android:textSize="16sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/til_telefono" />
@@ -161,6 +165,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
+
+                android:background="@color/white"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_localizacion" />
