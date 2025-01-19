@@ -22,9 +22,9 @@ class MascotaViewHolder(
 
         // Asignamos datps
         binding.tvMascotaName.text = mascotaFile.name
-        if (mascotaFile.genero){
+        if (mascotaFile.genero == "Macho") {
             binding.ivGenero.setImageResource(R.drawable.ic_male)
-        }else{
+        } else {
             binding.ivGenero.setImageResource(R.drawable.ic_female)
         }
 

@@ -4,7 +4,6 @@
     <string name="title_dashboard">Notificaciones</string>
     <string name="title_notifications">Perfil</string>
     <string name="btnenviar">Enviar</string>
-    <string name="spiLocalizacion">Selecciona tu localización:</string>
     <string name="user_image">avatar</string>
     <string name="btnguardar">Guardar</string>
     <string name="etApellido">Apellido</string>
@@ -15,6 +14,16 @@
     <string name="btnadd">añadir</string>
 
 
+
+
+    <!--  label spinners  -->
+    <string name="spiLocalizacion">Selecciona tu localización:</string>
+
+    <string name="spiHabitat">Selecciona el habitat:</string>
+    <string name="spiRaza">Selecciona la raza:</string>
+    <string name="spiEsteril">¿tu cuyo es esteril?</string>
+    <string name="spiGenero">Selecciona el genero:</string>
+
     <!--  array de localizacion general  -->
     <string-array name="localizacion_options">
         <item>Costa</item>
@@ -22,6 +31,42 @@
         <item>Montaña</item>
         <item>Zona Centro</item>
     </string-array>
+
+    <!--  array de Esteril  -->
+    <string-array name="esteril_options">
+        <item>Estéril</item>
+        <item>No esterilizado</item>
+    </string-array>
+
+
+    <!--  array de razas  -->
+    <string-array name="razas_options">
+        <item>Skinny</item>
+        <item>Peruana</item>
+        <item>Abisinio</item>
+        <item>Americano</item>
+        <item>Sheltie</item>
+        <item>Otro</item>
+    </string-array>
+
+
+
+    <!--  array de genero  -->
+    <string-array name="genero_options">
+        <item>Macho</item>
+        <item>Hembra</item>
+    </string-array>
+
+
+    <!--  array de espacio  -->
+    <string-array name="openclose_options">
+        <item>Abierto</item>
+        <item>Cerrado</item>
+    </string-array>
+
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="splash">splash</string>
@@ -34,5 +79,17 @@
     <string name="age_label">Edad: %d años</string>
     <string name="imgGenDes">Genero</string>
     <string name="imgPesoDes">Peso</string>
+    <string name="timeText">Hora: hh:mm:ss</string>
+    <string name="fechaText">Fecha: DD/MM/AAAA</string>
+    <string name="descEvent">Descripción del evento</string>
+    <string name="Titulo">Título</string>
+    <string name="namePet">Nombre de la mascota</string>
+    <string name="tipohabitatText">Tipo de hábitat</string>
+    <string name="temphabText">Temperatura del hábitat</string>
+    <string name="tamhabText">Tamaño del hábitat</string>
+    <string name="caphabText">Capacidad del hábitat</string>
+    <string name="deschabText">Descripción del hábitat</string>
+    <string name="nomhabText">Nombre del hábitat</string>
+    <string name="alarmasVaciaText">No hay alarmas disponibles</string>
 
 </resources>

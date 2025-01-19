@@ -42,17 +42,16 @@ data class NotificationsEntity(
     var notas: String,
 
     @ColumnInfo(name = "notification_comida")
-    var comida: Float,
+    var comida: Double,
 
     @ColumnInfo(name = "notification_temp")
-    var temperatura: Float,
+    var temperatura: Double,
 
     @ColumnInfo(name = "notification_dosis")
     var dosis: String,
 
     @ColumnInfo(name = "notification_aseo")
     var aseo: String,
-
 
     @ColumnInfo(name = "pet_owner_id")
     val mascotaId: Long,  // Referencia a mascota
