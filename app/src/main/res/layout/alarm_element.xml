@@ -67,6 +67,7 @@
 
                 app:layout_constraintEnd_toStartOf="@id/pet_image"
                 app:layout_constraintStart_toEndOf="@id/type_image"
+                />
 
             <TextView
                 android:id="@+id/tvActName"
@@ -75,7 +76,6 @@
                 android:layout_marginTop="8dp"
                 android:text="nombre de alarma"
                 android:textSize="14sp"
-
                 app:layout_constraintEnd_toStartOf="@id/pet_image"
                 app:layout_constraintStart_toEndOf="@id/type_image"
                 app:layout_constraintTop_toBottomOf="@id/tvHoratio"
