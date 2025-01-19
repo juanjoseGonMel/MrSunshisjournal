@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
-    android:background="@drawable/fondo_oscuro"
-    >
+    tools:context=".ui.home.HomeFragment" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,19 +19,17 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/habitatTitleTxt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/label_habitat"
+                android:text="Hábitats"
                 android:textColor="@color/primaryTextColor"
-                android:background="@color/white"
                 android:textSize="18sp"
-                android:layout_centerHorizontal="true"/>
+                android:gravity="center_horizontal" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/habitatTitleTxt"
                 app:cardElevation="2dp">
@@ -57,7 +53,7 @@
                         android:text="Sin hábitats registrados"
                         android:layout_centerInParent="true"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:layout_margin="10dp"
                         android:gravity="center_horizontal" />
 
@@ -88,7 +84,7 @@
                             android:text="Cargando hábitats"
                             android:layout_centerInParent="true"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:layout_margin="10dp"
                             android:gravity="center_horizontal" />
 
@@ -117,22 +113,18 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/petTitleTxt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/label_pet"
+                android:text="Mascotas"
                 android:textColor="@color/primaryTextColor"
-                android:background="@color/white"
                 android:textSize="18sp"
-                android:layout_centerHorizontal="true"
-                />
+                android:gravity="center_horizontal" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_below="@id/petTitleTxt"
                 app:cardElevation="2dp">
 
@@ -156,7 +148,7 @@
                         android:text="Sin mascotas registradas"
                         android:layout_centerInParent="true"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:layout_margin="10dp"
                         android:gravity="center_horizontal" />
 
@@ -187,7 +179,7 @@
                             android:text="Cargando mascotas"
                             android:layout_centerInParent="true"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:layout_margin="10dp"
                             android:gravity="center_horizontal" />
 

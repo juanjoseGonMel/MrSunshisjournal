@@ -20,6 +20,8 @@ import com.modulo10.juandev.mrsunshisjournal.ui.dialogs.HabitatDialogFragment
 import com.modulo10.juandev.mrsunshisjournal.ui.dialogs.PetDialogFragment
 import com.modulo10.juandev.mrsunshisjournal.ui.listeners.NewHabitatListener
 import com.modulo10.juandev.mrsunshisjournal.ui.listeners.NewMascotaListener
+import com.modulo10.juandev.mrsunshisjournal.ui.listeners.UpdateHabitatListener
+import com.modulo10.juandev.mrsunshisjournal.ui.listeners.UpdateMascotaListener
 import com.modulo10.juandev.mrsunshisjournal.utils.message
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,6 +40,9 @@ class HomeFragment : BaseFragment() {
 
     private lateinit var createMascotaListener: NewMascotaListener
     private lateinit var createHabitatListener: NewHabitatListener
+
+    private lateinit var updateMascotaListener: UpdateMascotaListener
+    private lateinit var updateHabitatListener: UpdateHabitatListener
 
     //private lateinit var permissionViewModel: PermissionViewModel
     //private lateinit var permissionManager: PermissionManager
@@ -149,6 +154,19 @@ class HomeFragment : BaseFragment() {
                 saveMascota(mascota)
             }
         }
+
+        updateHabitatListener = object : UpdateHabitatListener {
+            override fun onUpdateHabitat(habitat: HabitatEntity) {
+                updateHabitat(habitat)
+            }
+
+        }
+
+        updateMascotaListener = object : UpdateMascotaListener {
+            override fun  onUpdateMascota(mascota: MascotaEntity) {
+                updateMascota(mascota)
+            }
+        }
     }
 
     private fun setUpObservers() {
@@ -206,9 +224,8 @@ class HomeFragment : BaseFragment() {
         homeViewModel.mascotaFiles.observe(viewLifecycleOwner) { mascotas ->
             if (mascotas.isNotEmpty()) {
                 mascotasList = mascotas
-                val mascotaAdapter = MascotaAdapter(mascotas) {
-                    //Manejamos el click
-                    message("Click habitat")
+                val mascotaAdapter = MascotaAdapter(mascotas) { mascota ->
+                    openMascotaDetail(mascota)
                 }
                 binding.rvMascotas.apply {
                     layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
@@ -266,6 +283,14 @@ class HomeFragment : BaseFragment() {
         homeViewModel.saveHabitat(habitat)
     }
 
+    private fun updateMascota(mascota: MascotaEntity) {
+
+    }
+
+    private fun updateHabitat(habitat: HabitatEntity) {
+
+    }
+
     private fun showNewHabitatForm() {
         val habitatDialog = HabitatDialogFragment().apply {
             setNewHabitatListener(createHabitatListener)
@@ -310,13 +335,18 @@ class HomeFragment : BaseFragment() {
         }
     }
 
-    fun getHabitatsNameList() : ArrayList<String> {
-        var habitatsNamesList = ArrayList<String>()
+    fun openMascotaDetail(mascota: MascotaEntity) {
+        val params = Bundle()
+        params.putParcelable("pet", mascota)
+        params.putParcelableArrayList("habitats", habitatsList)
+        params.putBoolean("update", true)
 
-        for (habitat in habitatsList) {
-            habitatsNamesList.add(habitat.name)
+        val petDialog = PetDialogFragment().apply {
+            arguments = params
+            setNewMascotaListener(createMascotaListener)
         }
-
-        return habitatsNamesList
+        activity?.let { myActivity ->
+            petDialog.show(myActivity.supportFragmentManager, "PetDetailDialog")
+        }
     }
 }

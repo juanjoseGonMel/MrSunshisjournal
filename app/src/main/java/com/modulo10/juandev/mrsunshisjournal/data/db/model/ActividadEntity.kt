@@ -18,6 +18,9 @@ data class ActividadEntity(
     @ColumnInfo(name = "act_name")
     var name: String,
 
+    @ColumnInfo(name = "act_pet")
+    var mascota: String,
+
     @ColumnInfo(name = "act_tipo")
     var tipo: String,
 

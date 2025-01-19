@@ -10,7 +10,7 @@ import com.modulo10.juandev.mrsunshisjournal.databinding.PetElementBinding
 
 class MascotaAdapter(
     private val mascotas : MutableList<MascotaEntity>,
-    private val onMascotaClick : (Int) -> Unit
+    private val onMascotaClick : (MascotaEntity) -> Unit
 ) : RecyclerView.Adapter<MascotaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MascotaViewHolder {
@@ -23,7 +23,7 @@ class MascotaAdapter(
     override fun onBindViewHolder(holder: MascotaViewHolder, position: Int) {
         holder.bind(mascotas[position])
         holder.itemView.setOnClickListener{
-            onMascotaClick(position)
+            onMascotaClick(mascotas[position])
         }
     }
 

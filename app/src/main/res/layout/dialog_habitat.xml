@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/productImg"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:layout_margin="10dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@color/white">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/habitatNameEdt"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="5dp"
+                                android:hint="@string/nomhabText"
+                                android:textColor="@color/black"
+                                android:inputType="textEmailAddress"
+                                android:singleLine="true"
+                                android:background="@color/white"
+                                android:textSize="14sp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@color/white">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/habitatDescEdt"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:padding="5dp"
+                                android:hint="@string/deschabText"
+                                android:textColor="@color/black"
+                                android:inputType="textMultiLine"
+                                android:background="@color/white"
+                                android:textSize="16sp"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/habitatCapacityEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:hint="@string/caphabText"
+                            android:textColor="@color/black"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:background="@color/white"
+                            android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/habitatSizeEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:hint="@string/tamhabText"
+                            android:textColor="@color/black"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:background="@color/white"
+                            android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/habitatTempEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:hint="@string/temphabText"
+                            android:textColor="@color/black"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:background="@color/white"
+                            android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/habitatTypeEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:padding="5dp"
+                            android:hint="@string/tipohabitatText"
+                            android:textColor="@color/black"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:background="@color/white"
+                            android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/openCloseSpin"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/saveHabitatBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:textColor="@color/black"
+                        android:text="@string/btnguardar"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

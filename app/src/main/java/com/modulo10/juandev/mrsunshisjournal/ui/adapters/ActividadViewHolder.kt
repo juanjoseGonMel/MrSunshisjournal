@@ -14,9 +14,6 @@ class ActividadViewHolder(
     fun bind(actividadFile: ActividadEntity) {
 
         // Asignamos el nombre del hábitat
-        binding.tvAlarmType.text = actividadFile.name
-        binding.tvpetname.text = "rodolfo"
-        binding
 
         Glide.with(binding.root)
             .load(actividadFile.name)

@@ -15,7 +15,7 @@ interface NotificationsDAO {
 
     //Create
     @Insert
-    suspend fun insertNotificacion(notificacion: NotificationsEntity):Long
+    suspend fun insertNotificacion(notificacion: NotificationsEntity) : Long
     @Insert
     suspend fun insertNotificaciones(notificacion: MutableList<NotificationsEntity>)
 

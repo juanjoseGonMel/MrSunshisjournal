@@ -1,5 +1,6 @@
 package com.modulo10.juandev.mrsunshisjournal.data.db.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
@@ -8,6 +9,7 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.Relation
 import com.modulo10.juandev.mrsunshisjournal.utils.Constants
+import kotlinx.parcelize.Parcelize
 import java.util.Date
 
 
@@ -22,6 +24,7 @@ import java.util.Date
         )
     ]
 )
+@Parcelize
 data class MascotaEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "pet_id")
@@ -53,7 +56,11 @@ data class MascotaEntity(
 
     @ColumnInfo(name = "habitat_owner_id")
     val habitatId: Long
-)
+) : Parcelable {
+    override fun toString(): String {
+        return name
+    }
+}
 
 
 // Clase de relación entre Mascotas, Notificaciones y Actividades

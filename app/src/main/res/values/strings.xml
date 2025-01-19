@@ -4,7 +4,6 @@
     <string name="title_dashboard">Notificaciones</string>
     <string name="title_notifications">Perfil</string>
     <string name="btnenviar">Enviar</string>
-
     <string name="user_image">avatar</string>
     <string name="btnguardar">Guardar</string>
     <string name="etApellido">Apellido</string>
@@ -13,6 +12,8 @@
     <string name="etnombre">Nombre</string>
     <string name="ettelefono">Teléfono</string>
     <string name="btnadd">añadir</string>
+
+
 
 
     <!--  label spinners  -->
@@ -57,6 +58,13 @@
     </string-array>
 
 
+    <!--  array de espacio  -->
+    <string-array name="openclose_options">
+        <item>Abierto</item>
+        <item>Cerrado</item>
+    </string-array>
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -71,9 +79,17 @@
     <string name="age_label">Edad: %d años</string>
     <string name="imgGenDes">Genero</string>
     <string name="imgPesoDes">Peso</string>
+    <string name="timeText">Hora: hh:mm:ss</string>
+    <string name="fechaText">Fecha: DD/MM/AAAA</string>
+    <string name="descEvent">Descripción del evento</string>
+    <string name="Titulo">Título</string>
     <string name="namePet">Nombre de la mascota</string>
-    <string name="spiOpenClose">¿su habitat esta abierto para que su cuyo salga cuando quiera?</string>
-    <string name="label_pet">Mascota</string>
-    <string name="label_habitat">Habitats</string>
+    <string name="tipohabitatText">Tipo de hábitat</string>
+    <string name="temphabText">Temperatura del hábitat</string>
+    <string name="tamhabText">Tamaño del hábitat</string>
+    <string name="caphabText">Capacidad del hábitat</string>
+    <string name="deschabText">Descripción del hábitat</string>
+    <string name="nomhabText">Nombre del hábitat</string>
+    <string name="alarmasVaciaText">No hay alarmas disponibles</string>
 
 </resources>

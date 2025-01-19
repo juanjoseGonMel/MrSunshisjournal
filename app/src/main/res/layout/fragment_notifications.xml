@@ -32,35 +32,37 @@
             app:shapeAppearanceOverlay="@style/CircularImage" />
 
         <!-- Ícono de la cámara sobre la imagen -->
-        <ImageView
-            android:id="@+id/camera_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="end|bottom"
-            android:layout_marginTop="-16dp"
-            android:background="@android:color/white"
-            android:contentDescription="@string/imgPhoto"
-            android:padding="8dp"
-            android:src="@drawable/ic_camera" />
+    <!--
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="-16dp"
+        android:background="@android:color/white"
+        android:contentDescription="@string/imgPhoto"
+        android:padding="8dp"
+        android:src="@drawable/ic_camera" />
+        -->
 
-    </FrameLayout>
-
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frameIcon">
+</FrameLayout>
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+<ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/frameIcon">
 
 
-            <!-- Nombre -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- Nombre -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_nombre"
                 style="@style/CustomTextInputLayout"

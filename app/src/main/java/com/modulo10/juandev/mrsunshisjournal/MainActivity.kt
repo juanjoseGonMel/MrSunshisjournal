@@ -64,7 +64,8 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_journal, R.id.navigation_notifications
+                //R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_journal, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -72,6 +73,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+    /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_toolbar, menu)
 
@@ -95,8 +98,10 @@ class MainActivity : AppCompatActivity() {
 
         return true
     }
+    */
 
     // Maneja la acción cuando se selecciona el botón en el ActionBar
+    /*
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_add -> {
@@ -107,6 +112,8 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+     */
 
 
 }

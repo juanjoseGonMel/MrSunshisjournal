@@ -17,6 +17,7 @@ class DatabaseFiller(private val repository: JournalRepository) {
         // Insertar Actividades
         val actividad1 = ActividadEntity(
             name = "Ejercicio",
+            mascota = "Shui",
             tipo = "Físico",
             inicio = Date(1630128000000),  // Fecha específica en milisegundos
             final =  Date(1630214400000),
@@ -24,6 +25,7 @@ class DatabaseFiller(private val repository: JournalRepository) {
         )
         val actividad2 = ActividadEntity(
             name = "Alimentación",
+            mascota = "shushi",
             tipo = "Nutrición",
             inicio = Date(1630128000000),  // Fecha específica en milisegundos
             final =  Date(1630314400000),
